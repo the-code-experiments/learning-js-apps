@@ -4,12 +4,19 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         jshint: {
-            all: ['Gruntfile.js', 'app/**/*.js']
+            all: ['Gruntfile.js', 'src/app/**/*.js']
+        },
+
+        csslint: {
+            strict: {
+                src: ['src/styles/**/*.css']
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-csslint');
 
-    grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('default', ['jshint', 'csslint']);
 
 }
