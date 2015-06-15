@@ -2,5 +2,10 @@
     "name": "require-way",
     "version": "0.0.0",
     "author": "Ashwin Hegde",
-    "license": "MIT"
+    "license": "MIT",
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-contrib-csslint": "^0.4.0",
+        "grunt-contrib-jshint": "^0.11.2"
+    }
 }
