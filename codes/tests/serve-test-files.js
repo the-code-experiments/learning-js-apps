@@ -1,3 +1,5 @@
 require([
 	'app/init'
-], runMocha);
+], function() {
+	runMocha();
+});
