@@ -2,10 +2,10 @@ requirejs.config({
 	baseUrl: "../src",
 
 	paths: {
-		"tests": "../tests/",
 		"mocha": "../tests/libs/mocha",
 		"chai": "../tests/libs/chai",
-		"config": "../tests/config",
+		"configDir": "../tests/config/",
+		"configFile": "../tests/configs/config",
 		"app": "../tests/app",
 		"src": "../src/app"
 	},
@@ -20,10 +20,10 @@ requirejs.config({
 	}
 });
 
-require(['config'], function(config) {
+require(['configFile'], function(config) {
 	var config = new config();
 
-	require(['tests/serve-test-files'], function() {
+	require(['configDir/serve-test-files'], function() {
 		config.runMocha();
 	});
 });
