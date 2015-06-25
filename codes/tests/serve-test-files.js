@@ -1,5 +1,4 @@
-require([
-	'app/init'
+define([
+	"app/init"
 ], function() {
-	runMocha();
 });

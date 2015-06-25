@@ -1,7 +1,9 @@
-define(['../app/arithmetic'], function(arithmetic) {
+define(['src/arithmetic'], function(arithmetic) {
 
-	var a = {};
-	var expect = {};
+	var a = expect = {};
+
+	a = new arithmetic();
+	expect = chai.expect;
 
 	describe("Arithmetic operations", function() {
 
@@ -10,8 +12,16 @@ define(['../app/arithmetic'], function(arithmetic) {
 			expect = chai.expect;
 		});
 
-		it("Addition", function() {
+		it("Addition of numbers", function() {
 			expect(a.add(5, 5)).to.equal(10);
+		});
+
+		it("Addition of string", function() {
+			expect(a.add("Ashwin", "Hegde")).to.equal("AshwinHegde");
+		});
+
+		after(function() {
+			a = expect = {};
 		});
 
 	})
