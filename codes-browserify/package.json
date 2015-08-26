@@ -1,0 +1,10 @@
+{
+  "name": "codes-browserify",
+  "version": "1.0.0",
+  "description": "browserify edition",
+  "author": "Ashwin Hegde",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
+}
